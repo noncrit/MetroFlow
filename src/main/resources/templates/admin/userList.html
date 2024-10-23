@@ -28,7 +28,7 @@
         <!--        /board?page=1-->
         <a th:href="@{/admin/userList(page=1)}">첫 페이지 </a>
         <!-- 이전 링크 활성화 비활성화 -->
-        <a th:href="${userList.first} ? '#' : @{/admin/userList(page=${boardList.number})}"> 이전 </a>
+        <a th:href="${userList.first} ? '#' : @{/admin/userList(page=${userList.number})}"> 이전 </a>
 
         <!-- 페이지 번호 링크 -->
         <span th:each="page: ${#numbers.sequence(startPage, endPage)}">
